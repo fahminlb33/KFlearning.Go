@@ -13,11 +13,12 @@ namespace KFlearning.Go.ViewModels
         {
             MenuItems = new ObservableCollection<ShellViewMasterMenuItem>(new[]
             {
-                    new ShellViewMasterMenuItem { Id = 0, Title = "Page 1" },
-                    new ShellViewMasterMenuItem { Id = 1, Title = "Page 2" },
-                    new ShellViewMasterMenuItem { Id = 2, Title = "Page 3" },
-                    new ShellViewMasterMenuItem { Id = 3, Title = "Page 4" },
-                    new ShellViewMasterMenuItem { Id = 4, Title = "Page 5" },
+                    new ShellViewMasterMenuItem { Id = 0, Title = "Profil" },
+                    new ShellViewMasterMenuItem { Id = 1, Title = "Beranda" },
+                    new ShellViewMasterMenuItem { Id = 2, Title = "Tutorial" },
+                    new ShellViewMasterMenuItem { Id = 3, Title = "Blog" },
+                    new ShellViewMasterMenuItem { Id = 4, Title = "About" },
+                    new ShellViewMasterMenuItem { Id = 5, Title = "Logout" },
                 });
         }
 

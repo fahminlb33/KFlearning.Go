@@ -10,6 +10,7 @@
     <StackLayout>
         <ListView
             x:Name="MenuItemsListView"
+            BackgroundColor="#5B0101"
             HasUnevenRows="true"
             ItemsSource="{Binding MenuItems}"
             SeparatorVisibility="None">
@@ -23,24 +24,26 @@
                 </x:Array>
             </d:ListView.ItemsSource>
             <ListView.Header>
-                <Grid BackgroundColor="#03A9F4">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="10" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="10" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="30" />
-                        <RowDefinition Height="80" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="10" />
-                    </Grid.RowDefinitions>
-                    <Label
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        Style="{DynamicResource SubtitleStyle}"
-                        Text="AppName" />
-                </Grid>
+                <StackLayout Orientation="Vertical">
+                    <Grid
+                        Margin="10,20,10,20"
+                        BackgroundColor="#5B0101"
+                        HeightRequest="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Column="0" />
+                        <Label
+                            Grid.Column="1"
+                            Style="{DynamicResource SubtitleStyle}"
+                            Text="AppName"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </Grid>
+                    <ContentView BackgroundColor="White" HeightRequest="1" />
+                </StackLayout>
             </ListView.Header>
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -50,6 +53,7 @@
                                 d:Text="{Binding .}"
                                 FontSize="24"
                                 Text="{Binding Title}"
+                                TextColor="White"
                                 VerticalOptions="FillAndExpand"
                                 VerticalTextAlignment="Center" />
                         </StackLayout>
