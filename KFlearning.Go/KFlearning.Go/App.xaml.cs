@@ -11,7 +11,7 @@ namespace KFlearning.Go
         {
             InitializeComponent();
 
-            MainPage = new ShellView();
+            MainPage = new LoginView();
         }
 
         protected override void OnStart()
