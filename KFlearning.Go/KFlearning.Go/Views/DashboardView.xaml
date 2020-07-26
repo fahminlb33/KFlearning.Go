@@ -5,10 +5,104 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Beranda"
     mc:Ignorable="d">
-    <ContentPage.Content>
-        <StackLayout>
-            <Button></Button>
-        </StackLayout>
-    </ContentPage.Content>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            Margin="20,20,20,40"
+            Padding="0"
+            BackgroundColor="#3454A7"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Image Aspect="AspectFill" Source="dashboard_splash" />
+            <Label
+                Margin="15"
+                FontAttributes="Bold"
+                FontSize="30"
+                Text="Selamat datang,        User!"
+                TextColor="White" />
+        </Grid>
+
+        <Frame
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="20,0,10,10"
+            Padding="0"
+            BackgroundColor="#3454A7"
+            CornerRadius="10">
+            <StackLayout Margin="15">
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Tutorial dibaca"
+                    TextColor="White" />
+                <Label
+                    FontSize="70"
+                    HorizontalOptions="Center"
+                    Text="30"
+                    TextColor="White" />
+            </StackLayout>
+        </Frame>
+        <Frame
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="10,0,20,10"
+            Padding="0"
+            BackgroundColor="#FF8F39"
+            CornerRadius="10">
+            <StackLayout Margin="15">
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Blog dikerjakan"
+                    TextColor="White" />
+                <Label
+                    FontSize="70"
+                    HorizontalOptions="Center"
+                    Text="10"
+                    TextColor="White" />
+            </StackLayout>
+        </Frame>
+
+        <Frame
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="20,10,10,0"
+            Padding="0"
+            BackgroundColor="#646161"
+            CornerRadius="10">
+            <StackLayout Margin="15">
+                <Image HorizontalOptions="Center" Source="icon_web" />
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Buka homepage"
+                    TextColor="White" />
+            </StackLayout>
+        </Frame>
+        <Frame
+            Grid.Row="2"
+            Grid.Column="1"
+            Margin="10,10,20,0"
+            Padding="0"
+            BackgroundColor="#5B0101"
+            CornerRadius="10">
+            <StackLayout Margin="15">
+                <Image HorizontalOptions="Center" Source="icon_mail" />
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Kirim feedback"
+                    TextColor="White" />
+            </StackLayout>
+        </Frame>
+    </Grid>
 </ContentPage>
