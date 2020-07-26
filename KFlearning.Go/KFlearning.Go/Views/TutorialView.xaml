@@ -5,14 +5,32 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:KFlearning.Go.Models"
     Title="Tutorial"
     mc:Ignorable="d">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <Grid Padding="20" BackgroundColor="{StaticResource PrimaryColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label
+            Grid.Row="0"
+            FontAttributes="Bold"
+            FontSize="20"
+            Text="Mau belajar apa?"
+            TextColor="White" />
+        <Label
+            Grid.Row="1"
+            Margin="0,0,0,20"
+            Text="Gausah pusing! Yuk cari tahu tutorial disini."
+            TextColor="White" />
+        <ListView
+            Grid.Row="2"
+            HasUnevenRows="True"
+            ItemTemplate="{StaticResource ArticleItemTemplate}"
+            ItemsSource="{Binding Articles}"
+            SeparatorVisibility="None" />
+    </Grid>
 </ContentPage>

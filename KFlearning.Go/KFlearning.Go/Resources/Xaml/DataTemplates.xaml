@@ -1,3 +1,20 @@
 ﻿<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <DataTemplate x:Key="FeedItemTemplate" />
+    <DataTemplate x:Key="ArticleItemTemplate" x:DataType="{x:Type models:ArticleItemModel}">
+        <ViewCell Height="150">
+            <Frame
+                Margin="0,5,0,5"
+                Padding="15"
+                BackgroundColor="White"
+                HasShadow="true">
+                <StackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        Text="{Binding Title}"
+                        TextColor="#FF8F39" />
+                    <Label Text="{Binding Description}" />
+                </StackLayout>
+            </Frame>
+        </ViewCell>
+    </DataTemplate>
 </ResourceDictionary>

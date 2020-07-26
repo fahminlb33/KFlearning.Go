@@ -7,12 +7,29 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Blog"
     mc:Ignorable="d">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <Grid Padding="20" BackgroundColor="{StaticResource PrimaryColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label
+            Grid.Row="0"
+            FontAttributes="Bold"
+            FontSize="20"
+            Text="Baca apa hari ini?"
+            TextColor="White" />
+        <Label
+            Grid.Row="1"
+            Margin="0,0,0,20"
+            Text="Explore artikel dan informasi teknologi disini!"
+            TextColor="White" />
+        <ListView
+            Grid.Row="2"
+            HasUnevenRows="True"
+            ItemTemplate="{StaticResource ArticleItemTemplate}"
+            ItemsSource="{Binding Articles}"
+            SeparatorVisibility="None" />
+    </Grid>
 </ContentPage>
