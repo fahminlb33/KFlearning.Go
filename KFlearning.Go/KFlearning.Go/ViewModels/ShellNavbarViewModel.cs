@@ -1,5 +1,11 @@
 ﻿using KFlearning.Go.Infrastructure;
+using KFlearning.Go.Models;
+using KFlearning.Go.Services;
+using KFlearning.Go.Views;
+using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -7,54 +13,53 @@ namespace KFlearning.Go.ViewModels
 {
     public class ShellNavbarViewModel : ViewModelBase
     {
-        private object _selectedItem;
+        private readonly UserService _userService = UserService.Instance;
 
         public ICommand ListViewItemSelectedCommand { get; set; }
 
-        public ObservableCollection<ShellMenuItemViewModel> MenuItems { get; set; }
+        public ObservableCollection<NavbarItemModel> MenuItems { get; set; }
 
-        public object SelectedItem
-        {
-            get => _selectedItem;
-            set
-            {
-                _selectedItem = value;
-                OnPropertyChanged(nameof(SelectedItem));
-            }
-        }
+        public Uri ProfileSource => _userService.Profile;
+        public string ProfileName => $"Hai, {_userService.Name}!";
 
         public ShellNavbarViewModel()
         {
             PopulateItems();
-
-
+            ListViewItemSelectedCommand = new Command<NavbarItemModel>(ListView_ItemSelected);
+            Task.Run(() => Task.Delay(200)).ContinueWith(x =>
+            {
+                OnPropertyChanged(nameof(ProfileSource));
+                OnPropertyChanged(nameof(ProfileName));
+            });
         }
 
         private void PopulateItems()
         {
-            MenuItems = new ObservableCollection<ShellMenuItemViewModel>(new[]
+            MenuItems = new ObservableCollection<NavbarItemModel>(new[]
             {
-                new ShellMenuItemViewModel { Id = 0, Title = "Profil" },
-                new ShellMenuItemViewModel { Id = 1, Title = "Beranda" },
-                new ShellMenuItemViewModel { Id = 2, Title = "Tutorial" },
-                new ShellMenuItemViewModel { Id = 3, Title = "Blog" },
-                new ShellMenuItemViewModel { Id = 4, Title = "About" },
-                new ShellMenuItemViewModel { Id = 5, Title = "Logout" },
+                new NavbarItemModel { Id = PageId.Profile, Title = "Profil" },
+                new NavbarItemModel { Id = PageId.Dashboard, Title = "Beranda" },
+                new NavbarItemModel { Id = PageId.Tutorial, Title = "Tutorial" },
+                new NavbarItemModel { Id = PageId.Profile, Title = "Blog" },
+                new NavbarItemModel { Id = PageId.About, Title = "About" },
+                new NavbarItemModel { Id = PageId.Logout, Title = "Logout" },
             });
         }
 
-        private void ListView_ItemSelected(ShellMenuItemViewModel model)
+        private void ListView_ItemSelected(NavbarItemModel model)
         {
             if (model == null) return;
+            if (model.Id == PageId.Logout)
+            {
+                _userService.Logout();
+                Application.Current.MainPage = PageFactory.GetPage(PageId.Login, model.Title);
+                return;
+            }
 
-            //var page = (Page)Activator.CreateInstance(item.TargetType);
-            //page.Title = model.Title;
-
-            //var master = App.Current.MainPage as MasterDetailPage;
-            //master.Detail = new NavigationPage(page);
-            //master.IsPresented = false;
-
-            SelectedItem = null;
+            var master = Application.Current.MainPage as MasterDetailPage;
+            var page = PageFactory.GetPage(model.Id, model.Title);
+            master.Detail = new NavigationPage(page);
+            master.IsPresented = false;
         }
 
     }

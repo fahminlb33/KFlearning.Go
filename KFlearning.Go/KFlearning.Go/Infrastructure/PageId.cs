@@ -1,8 +1,9 @@
 ﻿namespace KFlearning.Go.Infrastructure
 {
-    public enum PageName
+    public enum PageId
     {
         Login,
+        Logout,
 
         Profile,
         Dashboard,

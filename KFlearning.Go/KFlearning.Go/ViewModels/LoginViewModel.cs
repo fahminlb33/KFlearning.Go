@@ -1,4 +1,5 @@
 ﻿using KFlearning.Go.Infrastructure;
+using KFlearning.Go.Services;
 using KFlearning.Go.Views;
 using Newtonsoft.Json;
 using Plugin.GoogleClient;
@@ -13,7 +14,8 @@ namespace KFlearning.Go.ViewModels
 {
     public class LoginViewModel : ViewModelBase
     {
-        IGoogleClientManager _googleService = CrossGoogleClient.Current;
+        private readonly IGoogleClientManager _googleService = CrossGoogleClient.Current;
+        private readonly UserService _userService = UserService.Instance;
         private bool _silentLogin;
         private bool _loginIsVisible;
 
@@ -44,7 +46,13 @@ namespace KFlearning.Go.ViewModels
             {
                 var googleUserString = JsonConvert.SerializeObject(e.Data);
                 Debug.WriteLine($"Google Logged in succesfully: {googleUserString}");
+
+                _userService.Email = e.Data.Email;
+                _userService.Name = e.Data.Name;
+                _userService.Profile = e.Data.Picture;
+
                 Application.Current.MainPage = new ShellView();
+                return;
             }
 
             if (_silentLogin)
