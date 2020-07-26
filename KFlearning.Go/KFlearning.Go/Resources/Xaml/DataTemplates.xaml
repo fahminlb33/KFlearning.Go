@@ -5,6 +5,7 @@
                 Margin="0,5,0,5"
                 Padding="15"
                 BackgroundColor="White"
+                CornerRadius="10"
                 HasShadow="true">
                 <StackLayout>
                     <Label
