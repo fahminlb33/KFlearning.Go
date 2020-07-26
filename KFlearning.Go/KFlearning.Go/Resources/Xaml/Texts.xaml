@@ -14,9 +14,17 @@
         <Setter Property="TextColor" Value="White" />
     </Style>
     <Style x:Key="NavbarProfileTextStyle" TargetType="Label">
-        <Setter Property="Margin" Value="10,0,0,5" />
+        <Setter Property="Margin" Value="10,0,0,0" />
         <Setter Property="FontSize" Value="Medium" />
-        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="End" />
         <Setter Property="TextColor" Value="White" />
+    </Style>
+    <Style x:Key="NavbarProfileSubtitleTextStyle" TargetType="Label">
+        <Setter Property="Margin" Value="10,0,0,0" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="VerticalOptions" Value="Start" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="Text" Value="Lihat profil" />
+        <Setter Property="FontSize" Value="12" />
     </Style>
 </ResourceDictionary>

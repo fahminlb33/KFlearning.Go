@@ -16,9 +16,9 @@ namespace KFlearning.Go.ViewModels
         private readonly UserService _userService = UserService.Instance;
 
         public ICommand ListViewItemSelectedCommand { get; set; }
+        public ICommand ProfileCommand { get; set; }
 
         public ObservableCollection<NavbarItemModel> MenuItems { get; set; }
-
         public Uri ProfileSource => _userService.Profile;
         public string ProfileName => $"Hai, {_userService.Name}!";
 
@@ -27,12 +27,9 @@ namespace KFlearning.Go.ViewModels
         public ShellNavbarViewModel()
         {
             PopulateItems();
+
             ListViewItemSelectedCommand = new Command<NavbarItemModel>(ListView_ItemSelected);
-            Task.Run(() => Task.Delay(200)).ContinueWith(x =>
-            {
-                OnPropertyChanged(nameof(ProfileSource));
-                OnPropertyChanged(nameof(ProfileName));
-            });
+            ProfileCommand = new Command(ProfileCommand_Handler);
         }
 
         private void PopulateItems()
@@ -45,6 +42,14 @@ namespace KFlearning.Go.ViewModels
                 new NavbarItemModel { Id = PageId.About, Title = "About" },
                 new NavbarItemModel { Id = PageId.Logout, Title = "Logout" },
             });
+        }
+
+        private void ProfileCommand_Handler()
+        {
+            var master = Application.Current.MainPage as MasterDetailPage;
+            var page = PageFactory.GetPage(PageId.Profile);
+            master.Detail = new NavigationPage(page);
+            master.IsPresented = false;
         }
 
         private void ListView_ItemSelected(NavbarItemModel model)

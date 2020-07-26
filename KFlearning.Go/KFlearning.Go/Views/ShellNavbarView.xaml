@@ -14,10 +14,51 @@
             <converters:SelectedItemEventArgsToSelectedItemConverter x:Key="SelectedItemConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
-    <StackLayout>
+    <StackLayout BackgroundColor="{StaticResource PrimaryColor}">
+        <StackLayout HeightRequest="150" Orientation="Vertical">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ProfileCommand}" NumberOfTapsRequired="1" />
+            </StackLayout.GestureRecognizers>
+
+            <Grid Margin="20" HeightRequest="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Frame
+                    Grid.RowSpan="2"
+                    Grid.Column="0"
+                    Padding="0"
+                    CornerRadius="50"
+                    HeightRequest="50"
+                    IsClippedToBounds="True"
+                    WidthRequest="50">
+                    <Image
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
+                        Source="{Binding ProfileSource}"
+                        VerticalOptions="Center"
+                        WidthRequest="50" />
+                </Frame>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Style="{StaticResource NavbarProfileTextStyle}"
+                    Text="{Binding ProfileName}" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Style="{StaticResource NavbarProfileSubtitleTextStyle}" />
+            </Grid>
+            <ContentView BackgroundColor="White" HeightRequest="1" />
+        </StackLayout>
         <ListView
             x:Name="MenuItemsListView"
-            BackgroundColor="#5B0101"
             HasUnevenRows="true"
             ItemsSource="{Binding MenuItems}"
             SeparatorVisibility="None">
@@ -36,41 +77,13 @@
                     Converter="{StaticResource SelectedItemConverter}"
                     EventName="ItemSelected" />
             </ListView.Behaviors>
-            <ListView.Header>
-                <StackLayout Orientation="Vertical">
-                    <Grid
-                        Margin="20"
-                        BackgroundColor="#5B0101"
-                        HeightRequest="50">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="50" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-
-                        <Frame
-                            Grid.Column="0"
-                            Padding="0"
-                            CornerRadius="50"
-                            IsClippedToBounds="True">
-                            <Image
-                                HeightRequest="50"
-                                HorizontalOptions="Center"
-                                Source="{Binding ProfileSource}"
-                                VerticalOptions="Center"
-                                WidthRequest="50" />
-                        </Frame>
-                        <Label
-                            Grid.Column="1"
-                            Style="{StaticResource NavbarProfileTextStyle}"
-                            Text="{Binding ProfileName}" />
-                    </Grid>
-                    <ContentView BackgroundColor="White" HeightRequest="1" />
-                </StackLayout>
-            </ListView.Header>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
+                        <StackLayout
+                            Margin="20,0,0,0"
+                            Padding="15,10"
+                            HorizontalOptions="FillAndExpand">
                             <Label
                                 d:Text="{Binding .}"
                                 FontSize="24"
