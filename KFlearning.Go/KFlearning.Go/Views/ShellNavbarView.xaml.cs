@@ -13,16 +13,12 @@ namespace KFlearning.Go.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ShellNavbarView : ContentPage
     {
-        public ListView ListView;
-
         public ShellNavbarView()
         {
             InitializeComponent();
-
-            BindingContext = new ShellViewMasterViewModel();
-            ListView = MenuItemsListView;
+            BindingContext = new ShellNavbarViewModel();
         }
 
-        
+
     }
 }

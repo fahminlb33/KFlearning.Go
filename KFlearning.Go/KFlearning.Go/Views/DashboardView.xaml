@@ -8,10 +8,7 @@
     mc:Ignorable="d">
     <ContentPage.Content>
         <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Xamarin.Forms! Ini dashboard"
-                VerticalOptions="CenterAndExpand" />
+            <Button></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

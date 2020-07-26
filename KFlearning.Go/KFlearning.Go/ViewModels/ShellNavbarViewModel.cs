@@ -25,7 +25,7 @@ namespace KFlearning.Go.ViewModels
 
         public ShellNavbarViewModel()
         {
-            
+            PopulateItems();
 
 
         }
@@ -47,12 +47,12 @@ namespace KFlearning.Go.ViewModels
         {
             if (model == null) return;
 
-            var page = (Page)Activator.CreateInstance(item.TargetType);
-            page.Title = model.Title;
+            //var page = (Page)Activator.CreateInstance(item.TargetType);
+            //page.Title = model.Title;
 
-            var master = App.Current.MainPage as MasterDetailPage;
-            master.Detail = new NavigationPage(page);
-            master.IsPresented = false;
+            //var master = App.Current.MainPage as MasterDetailPage;
+            //master.Detail = new NavigationPage(page);
+            //master.IsPresented = false;
 
             SelectedItem = null;
         }

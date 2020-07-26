@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
 
 namespace KFlearning.Go.Infrastructure
 {
@@ -12,6 +9,7 @@ namespace KFlearning.Go.Infrastructure
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
+            if (PropertyChanged == null) return;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
