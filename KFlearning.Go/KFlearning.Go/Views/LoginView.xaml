@@ -3,10 +3,16 @@
     x:Class="KFlearning.Go.Views.LoginView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:KFlearning.Go.Converters"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:res="clr-namespace:KFlearning.Go.Resources"
     mc:Ignorable="d">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:InvertBoolConverter x:Key="InvertBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <Grid BackgroundColor="{StaticResource PrimaryColor}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -21,6 +27,14 @@
             Grid.Row="2"
             Style="{StaticResource SplashTextStyle}"
             Text="{x:Static res:Strings.SplashPromo}" />
-        <Button Grid.Row="3" Style="{StaticResource LoginButtonStyle}" />
+        <Label
+            Grid.Row="3"
+            IsVisible="{Binding LoginIsVisible, Converter={StaticResource InvertBoolConverter}}"
+            Style="{StaticResource LoginWaitTextStyle}" />
+        <Button
+            Grid.Row="3"
+            Command="{Binding LoginCommand}"
+            IsVisible="{Binding LoginIsVisible}"
+            Style="{StaticResource LoginButtonStyle}" />
     </Grid>
 </ContentPage>
