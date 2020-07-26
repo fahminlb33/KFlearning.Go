@@ -20,7 +20,6 @@
             BackgroundColor="#5B0101"
             HasUnevenRows="true"
             ItemsSource="{Binding MenuItems}"
-            SelectedItem="{Binding SelectedItem, Mode=OneWay}"
             SeparatorVisibility="None">
             <d:ListView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
@@ -40,21 +39,30 @@
             <ListView.Header>
                 <StackLayout Orientation="Vertical">
                     <Grid
-                        Margin="10,20,10,20"
+                        Margin="20"
                         BackgroundColor="#5B0101"
                         HeightRequest="50">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="50" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <Image Grid.Column="0" />
+                        <Frame
+                            Grid.Column="0"
+                            Padding="0"
+                            CornerRadius="50"
+                            IsClippedToBounds="True">
+                            <Image
+                                HeightRequest="50"
+                                HorizontalOptions="Center"
+                                Source="{Binding ProfileSource}"
+                                VerticalOptions="Center"
+                                WidthRequest="50" />
+                        </Frame>
                         <Label
                             Grid.Column="1"
-                            Style="{DynamicResource SubtitleStyle}"
-                            Text="AppName"
-                            TextColor="White"
-                            VerticalOptions="Center" />
+                            Style="{StaticResource NavbarProfileTextStyle}"
+                            Text="{Binding ProfileName}" />
                     </Grid>
                     <ContentView BackgroundColor="White" HeightRequest="1" />
                 </StackLayout>

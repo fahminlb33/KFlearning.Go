@@ -15,7 +15,11 @@ namespace KFlearning.Go.Views
         public BrowserView()
         {
             InitializeComponent();
-            w.Source = "https://google.com";
+        }
+
+        public BrowserView(string url) : this()
+        {
+            w.Source = url;
         }
     }
 }
