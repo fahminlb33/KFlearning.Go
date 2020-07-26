@@ -64,7 +64,7 @@
             <StackLayout Margin="15">
                 <Label
                     HorizontalOptions="Center"
-                    Text="Blog dikerjakan"
+                    Text="Blog dibaca"
                     TextColor="White" />
                 <Label
                     FontSize="70"
@@ -81,6 +81,9 @@
             Padding="0"
             BackgroundColor="#646161"
             CornerRadius="10">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding OpenHomepageCommand}" NumberOfTapsRequired="1" />
+            </Frame.GestureRecognizers>
             <StackLayout Margin="15">
                 <Image HorizontalOptions="Center" Source="icon_web" />
                 <Label
@@ -96,6 +99,9 @@
             Padding="0"
             BackgroundColor="#5B0101"
             CornerRadius="10">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding SendFeedbackCommand}" NumberOfTapsRequired="1" />
+            </Frame.GestureRecognizers>
             <StackLayout Margin="15">
                 <Image HorizontalOptions="Center" Source="icon_mail" />
                 <Label
