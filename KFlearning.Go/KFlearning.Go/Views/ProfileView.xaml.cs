@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KFlearning.Go.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace KFlearning.Go.Views
         public ProfileView()
         {
             InitializeComponent();
+            BindingContext = new ProfileViewModel();
         }
     }
 }
