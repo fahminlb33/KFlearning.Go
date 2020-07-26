@@ -53,12 +53,12 @@ namespace KFlearning.Go.ViewModels
             if (model.Id == PageId.Logout)
             {
                 _userService.Logout();
-                Application.Current.MainPage = PageFactory.GetPage(PageId.Login, model.Title);
+                Application.Current.MainPage = PageFactory.GetPage(PageId.Login);
                 return;
             }
 
             var master = Application.Current.MainPage as MasterDetailPage;
-            var page = PageFactory.GetPage(model.Id, model.Title);
+            var page = PageFactory.GetPage(model.Id);
             master.Detail = new NavigationPage(page);
             master.IsPresented = false;
 

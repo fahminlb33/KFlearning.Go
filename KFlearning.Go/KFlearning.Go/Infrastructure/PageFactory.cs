@@ -13,7 +13,7 @@ namespace KFlearning.Go.Infrastructure
             return new BrowserView(url);
         }
 
-        public static Page GetPage(PageId page, string title)
+        public static Page GetPage(PageId page)
         {
             if (_pages.TryGetValue(page, out Page pageInstance))
             {
@@ -26,23 +26,23 @@ namespace KFlearning.Go.Infrastructure
                     return new LoginView();
 
                 case PageId.Profile:
-                    _pages.Add(PageId.Profile, new ProfileView() { Title = title });
+                    _pages.Add(PageId.Profile, new ProfileView());
                     return _pages[PageId.Profile];
 
                 case PageId.Dashboard:
-                    _pages.Add(PageId.Dashboard, new DashboardView() { Title = title });
+                    _pages.Add(PageId.Dashboard, new DashboardView());
                     return _pages[PageId.Dashboard];
 
                 case PageId.Tutorial:
-                    _pages.Add(PageId.Tutorial, new TutorialView() { Title = title });
+                    _pages.Add(PageId.Tutorial, new TutorialView());
                     return _pages[PageId.Tutorial];
 
                 case PageId.Blog:
-                    _pages.Add(PageId.Blog, new BlogView() { Title = title });
+                    _pages.Add(PageId.Blog, new BlogView());
                     return _pages[PageId.Blog];
 
                 case PageId.About:
-                    _pages.Add(PageId.About, new AboutView() { Title = title });
+                    _pages.Add(PageId.About, new AboutView());
                     return _pages[PageId.About];
 
                 default:
