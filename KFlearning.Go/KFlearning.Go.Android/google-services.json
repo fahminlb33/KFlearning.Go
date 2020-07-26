@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "77860240549",
+    "firebase_url": "https://kodesiana-go.firebaseio.com",
+    "project_id": "kodesiana-go",
+    "storage_bucket": "kodesiana-go.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77860240549:android:332f13896276ae7eb5a14c",
+        "android_client_info": {
+          "package_name": "com.kodesiana.kflearning.go"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "77860240549-dacs9tp5kclo44dsvkd9vmvbe0tssv5c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kodesiana.kflearning.go",
+            "certificate_hash": "7d4a74964a246b0e86a131fb8f7c558606b6bc28"
+          }
+        },
+        {
+          "client_id": "77860240549-sknnjdj824l6t32kld9u8ipbd4srfec8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-1sw31MWv4v8yiR8fvmHYC1Afy-W4LoQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "77860240549-sknnjdj824l6t32kld9u8ipbd4srfec8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
