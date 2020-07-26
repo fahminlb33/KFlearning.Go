@@ -5,10 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:models="clr-namespace:KFlearning.Go.Models"
-    Title="Tutorial"
+    xmlns:resources="clr-namespace:KFlearning.Go.Resources"
+    Title="{x:Static resources:Strings.TutorialTitle}"
     mc:Ignorable="d">
-    <Grid Padding="20" BackgroundColor="{StaticResource PrimaryColor}">
+    <Grid Padding="20" BackgroundColor="{StaticResource Maroon}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -19,12 +19,12 @@
             Grid.Row="0"
             FontAttributes="Bold"
             FontSize="20"
-            Text="Mau belajar apa?"
+            Text="{x:Static resources:Strings.TutorialHeading}"
             TextColor="White" />
         <Label
             Grid.Row="1"
             Margin="0,0,0,20"
-            Text="Gausah pusing! Yuk cari tahu tutorial disini."
+            Text="{x:Static resources:Strings.TutorialSubheading}"
             TextColor="White" />
         <ListView
             Grid.Row="2"

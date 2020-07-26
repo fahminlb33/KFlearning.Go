@@ -5,9 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Blog"
+    xmlns:resources="clr-namespace:KFlearning.Go.Resources"
+    Title="{x:Static resources:Strings.BlogTitle}"
     mc:Ignorable="d">
-    <Grid Padding="20" BackgroundColor="{StaticResource PrimaryColor}">
+    <Grid Padding="20" BackgroundColor="{StaticResource Maroon}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -18,12 +19,12 @@
             Grid.Row="0"
             FontAttributes="Bold"
             FontSize="20"
-            Text="Baca apa hari ini?"
+            Text="{x:Static resources:Strings.BlogHeading}"
             TextColor="White" />
         <Label
             Grid.Row="1"
             Margin="0,0,0,20"
-            Text="Explore artikel dan informasi teknologi disini!"
+            Text="{x:Static resources:Strings.BlogSubheading}"
             TextColor="White" />
         <ListView
             Grid.Row="2"

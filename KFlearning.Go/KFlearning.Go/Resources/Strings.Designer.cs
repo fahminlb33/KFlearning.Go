@@ -72,11 +72,155 @@ namespace KFlearning.Go.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Amalia Sabrina.
+        /// </summary>
+        internal static string AboutNameAmal {
+            get {
+                return ResourceManager.GetString("AboutNameAmal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fahmi Noor Fiqri.
+        /// </summary>
+        internal static string AboutNameFahmi {
+            get {
+                return ResourceManager.GetString("AboutNameFahmi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UI/UX Designer.
+        /// </summary>
+        internal static string AboutRoleDesigner {
+            get {
+                return ResourceManager.GetString("AboutRoleDesigner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C# Developer.
+        /// </summary>
+        internal static string AboutRoleDeveloper {
+            get {
+                return ResourceManager.GetString("AboutRoleDeveloper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tentang KFlearning Go.
+        /// </summary>
+        internal static string AboutTitle {
+            get {
+                return ResourceManager.GetString("AboutTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Baca apa hari ini?.
+        /// </summary>
+        internal static string BlogHeading {
+            get {
+                return ResourceManager.GetString("BlogHeading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Explore artikel dan informasi teknologi disini!.
+        /// </summary>
+        internal static string BlogSubheading {
+            get {
+                return ResourceManager.GetString("BlogSubheading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blog.
+        /// </summary>
+        internal static string BlogTitle {
+            get {
+                return ResourceManager.GetString("BlogTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mode Membaca.
+        /// </summary>
+        internal static string BrowserTitle {
+            get {
+                return ResourceManager.GetString("BrowserTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Beranda.
+        /// </summary>
+        internal static string DashboardTitle {
+            get {
+                return ResourceManager.GetString("DashboardTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        internal static string LoginTitle {
+            get {
+                return ResourceManager.GetString("LoginTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Navbar.
+        /// </summary>
+        internal static string NavbarTitle {
+            get {
+                return ResourceManager.GetString("NavbarTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profil.
+        /// </summary>
+        internal static string ProfileTitle {
+            get {
+                return ResourceManager.GetString("ProfileTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Belajar koding interaktif lebih mudah dan cepat dengan #KFLearningGo.
         /// </summary>
         internal static string SplashPromo {
             get {
                 return ResourceManager.GetString("SplashPromo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mau belajar apa?.
+        /// </summary>
+        internal static string TutorialHeading {
+            get {
+                return ResourceManager.GetString("TutorialHeading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gausah pusing! Yuk cari tahu tutorial disini..
+        /// </summary>
+        internal static string TutorialSubheading {
+            get {
+                return ResourceManager.GetString("TutorialSubheading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tutorial.
+        /// </summary>
+        internal static string TutorialTitle {
+            get {
+                return ResourceManager.GetString("TutorialTitle", resourceCulture);
             }
         }
     }

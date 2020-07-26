@@ -5,8 +5,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:resources="clr-namespace:KFlearning.Go.Resources"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-    Title="Profil"
+    Title="{x:Static resources:Strings.ProfileTitle}"
     mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
@@ -17,7 +18,7 @@
         <yummy:PancakeView
             Grid.Row="0"
             Padding="40"
-            BackgroundColor="{StaticResource PrimaryColor}"
+            BackgroundColor="{StaticResource Maroon}"
             CornerRadius="0,0,20,20">
             <StackLayout Orientation="Vertical">
                 <Frame

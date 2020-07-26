@@ -6,6 +6,7 @@
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="Margin" Value="20" />
     </Style>
+
     <Style x:Key="LoginWaitTextStyle" TargetType="Label">
         <Setter Property="Margin" Value="40" />
         <Setter Property="HeightRequest" Value="60" />
@@ -13,6 +14,7 @@
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="TextColor" Value="White" />
     </Style>
+
     <Style x:Key="NavbarProfileTextStyle" TargetType="Label">
         <Setter Property="Margin" Value="10,0,0,0" />
         <Setter Property="FontSize" Value="Medium" />
@@ -26,5 +28,14 @@
         <Setter Property="TextColor" Value="White" />
         <Setter Property="Text" Value="Lihat profil" />
         <Setter Property="FontSize" Value="12" />
+    </Style>
+
+    <Style x:Key="AboutNameTextStyle" TargetType="Label">
+        <Setter Property="Margin" Value="0,10,0,0" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+    </Style>
+    <Style x:Key="AboutRoleTextStyle" TargetType="Label">
+        <Setter Property="HorizontalOptions" Value="Center" />
     </Style>
 </ResourceDictionary>

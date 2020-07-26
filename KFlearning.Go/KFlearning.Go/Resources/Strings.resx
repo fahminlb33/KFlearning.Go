@@ -122,7 +122,55 @@
 
 Selain data science, kamu juga bisa mendapatkan berbagai info menarik dan artikel teknologi lainnya pada blog kami!</value>
   </data>
+  <data name="AboutNameAmal" xml:space="preserve">
+    <value>Amalia Sabrina</value>
+  </data>
+  <data name="AboutNameFahmi" xml:space="preserve">
+    <value>Fahmi Noor Fiqri</value>
+  </data>
+  <data name="AboutRoleDesigner" xml:space="preserve">
+    <value>UI/UX Designer</value>
+  </data>
+  <data name="AboutRoleDeveloper" xml:space="preserve">
+    <value>C# Developer</value>
+  </data>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>Tentang KFlearning Go</value>
+  </data>
+  <data name="BlogHeading" xml:space="preserve">
+    <value>Baca apa hari ini?</value>
+  </data>
+  <data name="BlogSubheading" xml:space="preserve">
+    <value>Explore artikel dan informasi teknologi disini!</value>
+  </data>
+  <data name="BlogTitle" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="BrowserTitle" xml:space="preserve">
+    <value>Mode Membaca</value>
+  </data>
+  <data name="DashboardTitle" xml:space="preserve">
+    <value>Beranda</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="NavbarTitle" xml:space="preserve">
+    <value>Navbar</value>
+  </data>
+  <data name="ProfileTitle" xml:space="preserve">
+    <value>Profil</value>
+  </data>
   <data name="SplashPromo" xml:space="preserve">
     <value>Belajar koding interaktif lebih mudah dan cepat dengan #KFLearningGo</value>
+  </data>
+  <data name="TutorialHeading" xml:space="preserve">
+    <value>Mau belajar apa?</value>
+  </data>
+  <data name="TutorialSubheading" xml:space="preserve">
+    <value>Gausah pusing! Yuk cari tahu tutorial disini.</value>
+  </data>
+  <data name="TutorialTitle" xml:space="preserve">
+    <value>Tutorial</value>
   </data>
 </root>
