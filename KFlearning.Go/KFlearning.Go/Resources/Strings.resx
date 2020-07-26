@@ -117,6 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutDescription" xml:space="preserve">
+    <value>KFlearning Go merupakan aplikasi untuk membimbing kamu belajar mengenai data science dengan cara membaca teori dan melakukan praktik koding menggunakan Python pada Google Colab.
+
+Selain data science, kamu juga bisa mendapatkan berbagai info menarik dan artikel teknologi lainnya pada blog kami!</value>
+  </data>
   <data name="SplashPromo" xml:space="preserve">
     <value>Belajar koding interaktif lebih mudah dan cepat dengan #KFLearningGo</value>
   </data>

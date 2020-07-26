@@ -61,6 +61,17 @@ namespace KFlearning.Go.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to KFlearning Go merupakan aplikasi untuk membimbing kamu belajar mengenai data science dengan cara membaca teori dan melakukan praktik koding menggunakan Python pada Google Colab.
+        ///
+        ///Selain data science, kamu juga bisa mendapatkan berbagai info menarik dan artikel teknologi lainnya pada blog kami!.
+        /// </summary>
+        internal static string AboutDescription {
+            get {
+                return ResourceManager.GetString("AboutDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Belajar koding interaktif lebih mudah dan cepat dengan #KFLearningGo.
         /// </summary>
         internal static string SplashPromo {
