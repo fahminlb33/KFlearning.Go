@@ -16,9 +16,15 @@ namespace KFlearning.Go.Views
         public ShellNavbarView()
         {
             InitializeComponent();
-            BindingContext = new ShellNavbarViewModel();
+            
+            var vm = new ShellNavbarViewModel();
+            vm.RequestDeselection += Vm_RequestDeselection;
+            BindingContext = vm;
         }
 
-
+        private void Vm_RequestDeselection(object sender, EventArgs e)
+        {
+            Device.BeginInvokeOnMainThread(() => MenuItemsListView.SelectedItem = null);
+        }
     }
 }

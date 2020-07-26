@@ -22,6 +22,8 @@ namespace KFlearning.Go.ViewModels
         public Uri ProfileSource => _userService.Profile;
         public string ProfileName => $"Hai, {_userService.Name}!";
 
+        public event EventHandler RequestDeselection;
+
         public ShellNavbarViewModel()
         {
             PopulateItems();
@@ -60,6 +62,8 @@ namespace KFlearning.Go.ViewModels
             var page = PageFactory.GetPage(model.Id, model.Title);
             master.Detail = new NavigationPage(page);
             master.IsPresented = false;
+
+            RequestDeselection?.Invoke(this, EventArgs.Empty);
         }
 
     }
