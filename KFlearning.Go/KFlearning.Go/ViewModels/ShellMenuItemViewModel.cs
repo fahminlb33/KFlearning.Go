@@ -9,9 +9,9 @@ using Xamarin.Forms;
 namespace KFlearning.Go.ViewModels
 {
 
-    public class ShellViewMasterMenuItem
+    public class ShellMenuItemViewModel
     {
-        public ShellViewMasterMenuItem()
+        public ShellMenuItemViewModel()
         {
             TargetType = typeof(DashboardView);
             
