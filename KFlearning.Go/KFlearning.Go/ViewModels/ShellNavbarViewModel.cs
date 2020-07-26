@@ -39,10 +39,9 @@ namespace KFlearning.Go.ViewModels
         {
             MenuItems = new ObservableCollection<NavbarItemModel>(new[]
             {
-                new NavbarItemModel { Id = PageId.Profile, Title = "Profil" },
                 new NavbarItemModel { Id = PageId.Dashboard, Title = "Beranda" },
                 new NavbarItemModel { Id = PageId.Tutorial, Title = "Tutorial" },
-                new NavbarItemModel { Id = PageId.Profile, Title = "Blog" },
+                new NavbarItemModel { Id = PageId.Blog, Title = "Blog" },
                 new NavbarItemModel { Id = PageId.About, Title = "About" },
                 new NavbarItemModel { Id = PageId.Logout, Title = "Logout" },
             });
